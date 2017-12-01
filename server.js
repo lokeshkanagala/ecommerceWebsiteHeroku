@@ -71,7 +71,7 @@ app.use(userRoutes);
 app.use(adminRoutes);
 app.use('/api', apiRoutes);
 
-app.listen(secret.port, function(err) {
+app.listen(process.env.PORT || secret.port, function(err) {
   if (err) throw err;
   console.log("Server is Running on port " + secret.port);
 });
